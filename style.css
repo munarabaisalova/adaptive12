@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: auto;
+    height: auto;
+    background: gray;
+}
+.header {
+    border: 2px solid;
+}
+.header ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+.header ul li {
+    list-style: none;
+    color: antiquewhite;
+    font-size: 20px;
+}
+.cont {
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    background-color: aqua;
+    margin-bottom: 60px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 130px;
+}
+#burger,
+[for="burger"]{
+    display: none;
+}
+@media (max-width:1100px) {
+    .container {
+        background-color: brown;
+    }
+    .con {
+        background-color: chartreuse;
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    
+}
+@media (max-width:500px){
+    .con{
+        width: 350px;
+        height: 300px;
+        border: 3px solid red;
+        
+    }
+    
+[for='burger']{
+    display: block;
+    right: 20px;
+    top: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+[for='burger']::before{
+    content: "☰";
+}
+#burger:checked+[for='burger']::before{
+    content: 'X';
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin-top: 50px;
+    width: 30%;
+    border: 2px solid;
+    margin-left: 35%;
+    height: 150px;
+    background-color: brown;
+}
+
+.header ul {
+    flex-wrap: wrap;
+    
+}
+
+.header{
+    background-color: brown;
+    margin-bottom: 200px;
+}
+#burger:checked + label + nav{
+display: block;
+}
+
+
+}
+
+/* @media (max-width:400px) {
+    .con {
+        width:200px ;
+        height: 200px;
+        background-color: chartreuse;
+    }
+    
+} */
